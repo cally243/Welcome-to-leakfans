@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAKFANS - Subscribe Now</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #ff0000;
+            padding: 20px;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 50px;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-btn {
+            background: #ff0000;
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .subscribe-btn:hover {
+            background: #cc0000;
+            transform: scale(1.05);
+        }
+
+        #paypal-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="img1.jpg" alt="LEAKFANS">
+</header>
+
+<div class="container">
+    <h1>Welcome to LEAKFANS</h1>
+    <p>After the payment, you will be automatically redirected to confirm your payment and receive the folders.</p>
+
+    <button class="subscribe-btn" onclick="showPayment()">Subscribe Now</button>
+
+    <div id="paypal-container">
+        <script src="https://www.paypal.com/sdk/js?client-id=BAA_LmgMmWB6jairBf77Luofduq78r7BREsL3UxZK2klMwsGBbZDJpm2-03Tk6jTbfLs3xd2oOtpMuGcFI&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+        <div id="paypal-container-WF9CEM6UXWW62"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "WF9CEM6UXWW62",
+          }).render("#paypal-container-WF9CEM6UXWW62");
+        </script>
+    </div>
+</div>
+
+<script>
+    function showPayment() {
+        document.getElementById("paypal-container").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
